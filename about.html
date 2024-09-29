@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pharmacy</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center/cover;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Button Styles */
+        .redirect-btn {
+            background-color: #80b4f0;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: fixed; /* Changed to fixed */
+            top: 20px;
+            right: 20px;
+            z-index: 1000; /* Ensures it's on top of other elements */
+        }
+
+        .redirect-btn:hover {
+            background-color: #4b5692;
+        }
+
+        /* Container Styles */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-top: 25px;
+            background-color: #cedceb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container:nth-child(even) {
+            flex-direction: right; /* Align image to the right for even containers */
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .text h2 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .text p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .image {
+            flex: 0 0 500px; /* Fixed width for the image container */
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .image {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            /* Adjust button position for mobile */
+            .redirect-btn {
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="redirect-btn" onclick="window.location.href='medical.html'">Medical</button>
+
+    <h1>About Us</h1>
+
+    <!-- Container 1 -->
+    <div class="container">
+        <div class="image">
+            <img src="image1.jpg" alt="About Image 1">
+        </div>
+        <div class="text">
+            <h2>Our Mission</h2>
+            <p>
+                Our pharmacy is dedicated to providing the best healthcare solutions to the community. 
+                We believe in offering personalized care that goes beyond just dispensing medications.
+            </p>
+        </div>
+    </div>
+
+    <!-- Container 2 -->
+    <div class="container">
+        <div class="text">
+            <h2>Why Choose Us</h2>
+            <p>
+                We provide a wide range of services, including medication management, immunizations, and health counseling.
+                Our staff is knowledgeable and always ready to assist with your healthcare needs.
+            </p>
+        </div>
+        <div class="image">
+            <img src="image2.jpg" alt="About Image 2">
+        </div>
+    </div>
+
+    <!-- Container 3 -->
+    <div class="container">
+        <div class="image">
+            <img src="image3.jpg" alt="About Image 3">
+        </div>
+        <div class="text">
+            <h2>Our Values</h2>
+            <p>
+                We uphold values of trust, integrity, and care. Every decision we make is centered around 
+                improving the health and well-being of our patients.
+            </p>
+        </div>
+    </div>
+
+    <!-- Container 4 -->
+    <div class="container">
+        <div class="text">
+            <h2>Meet Our Team</h2>
+            <p>
+                Our team consists of highly trained professionals who are passionate about delivering top-notch healthcare services. 
+                From pharmacists to support staff, each member is committed to your well-being.
+            </p>
+        </div>
+        <div class="image">
+            <img src="team.jpg" alt="About Image 4">
+        </div>
+    </div>
+
+</body>
+</html>

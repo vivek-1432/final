@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Website</title>
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('background.jpg') no-repeat center center/cover;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2 {
+            color: #1b5e20;
+        }
+        
+        p {
+            color: #333;
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            background-color: #66bb6a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-links li {
+            display: inline;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: #388e3c;
+        }
+        
+        /* Hamburger Menu (for mobile) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+        }
+        
+        /* Main Content Styles */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: white;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        
+        #home {
+            background-color: #a5d6a7;
+        }
+        
+        #about, #locations, #contact {
+            background-color: #c8e6c9;
+        }
+        
+        .section-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .section-text, .section-image {
+            flex: 1 1 300px;
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #66bb6a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            color: rgb(245, 49, 49);
+            font-size: 30px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #dcedc8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+        
+            .hamburger {
+                display: block;
+            }
+        
+            .nav-links.active {
+                display: flex;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #66bb6a;
+                text-align: center;
+            }
+        
+            .nav-links a {
+                display: block;
+                padding: 15px;
+            }
+
+            .section-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Pharmacy</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <div class="section-content">
+                <div class="section-text">
+                    <h1>Welcome to Our Pharmacy</h1>
+                    <p>Your health is our priority. Find the best medicines here.</p>
+                </div>
+                <div class="section-image">
+                    <img src="home-image.jpg" alt="Pharmacy Storefront">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-content">
+                <div class="section-image">
+                    <img src="about-image.jpg" alt="About Us">
+                </div>
+                <div class="section-text">
+                    <h2>About Us</h2>
+                    <p>We provide quality medications and healthcare products to our customers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="locations" class="section">
+            <div class="section-content">
+                <div class="section-text">
+                    <h2>Our Locations</h2>
+                    <p>Visit us at multiple convenient locations across the city.</p>
+                </div>
+                <div class="section-image">
+                    <img src="locations-image.jpg" alt="Our Locations">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-content">
+                <div class="section-image">
+                    <img src="contact-image.jpg" alt="Contact Us">
+                </div>
+                <div class="section-text">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch for inquiries or medical assistance.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Pharmacy. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle the mobile menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');   
+        }
+    </script>
+</body>
+</html>
