@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us Page</title>
+    <title>Contact Us - Pharmacy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,6 +60,19 @@
             background-color: #03313f;
         }
 
+        /* Hamburger Menu (for mobile) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+        }
+
         /* Contact Box */
         .contact-box {
             background-color: #1e9ae2;
@@ -69,7 +82,7 @@
             max-width: 500px;
             width: 90%;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 80px; /* Adjusted to prevent overlap with navbar */
             color: white;
         }
 
@@ -106,7 +119,7 @@
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background-color: #1e9ae2;
+                background-color: #82aaf3;
                 width: 100%;
                 text-align: center;
                 position: absolute;
@@ -135,16 +148,6 @@
             }
         }
 
-        .hamburger {
-            display: none;
-        }
-
-        .hamburger .line {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 4px;
-        }
     </style>
 </head>
 <body>
@@ -178,8 +181,9 @@
     </div>
 
     <script>
+        // Toggle mobile menu
         function toggleMenu() {
-            var navLinks = document.querySelector('.nav-links');
+            const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
     </script>
