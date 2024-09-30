@@ -17,8 +17,9 @@
             padding: 20px;
             text-align: center;
         }
+        /* Navbar Styles */
         .navbar {
-            background-color: #66bb6a;
+            background-color: #82aaf3;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -26,7 +27,8 @@
             align-items: center;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure it stays on top */
         }
         
         .logo {
@@ -55,27 +57,20 @@
         }
         
         .nav-links a:hover {
-            background-color: #388e3c;
+            background-color: #2a2964;
         }
-
-        /* Button Styles */
-        .redirect-btn {
-            background-color: #80b4f0;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
+        
+        /* Hamburger Menu (for mobile) */
+        .hamburger {
+            display: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            position: fixed; /* Changed to fixed */
-            top: 20px;
-            right: 20px;
-            z-index: 1000; /* Ensures it's on top of other elements */
         }
-
-        .redirect-btn:hover {
-            background-color: #4b5692;
+        
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
         }
 
         /* Container Styles */
@@ -92,18 +87,7 @@
         }
 
         .container:nth-child(even) {
-            flex-direction: right; /* Align image to the right for even containers */
-        }
-         .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-        
-        .hamburger .line {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 4px;
+            flex-direction: right;
         }
 
         .text {
@@ -125,7 +109,7 @@
         }
 
         .image {
-            flex: 0 0 500px; /* Fixed width for the image container */
+            flex: 0 0 500px;
         }
 
         .image img {
@@ -137,26 +121,32 @@
 
         /* Mobile-specific styles */
         @media (max-width: 768px) {
-            .container {
+            .nav-links {
+                display: none;
                 flex-direction: column;
+            }
+        
+            .hamburger {
+                display: block;
+            }
+        
+            .nav-links.active {
+                display: flex;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #66bb6a;
                 text-align: center;
             }
+        
+            .nav-links a {
+                display: block;
+                padding: 15px;
+            }
 
-            .container:nth-child(even) {
+            .container {
                 flex-direction: column;
-            }
-
-            .image {
-                margin-bottom: 10px;
-                width: 100%;
-            }
-
-            /* Adjust button position for mobile */
-            .redirect-btn {
-                top: 10px;
-                right: 10px;
-                padding: 10px 20px;
-                font-size: 16px;
             }
         }
     </style>
@@ -164,15 +154,21 @@
 <body>
 
     <nav class="navbar">
-            <div class="logo"><li><a href="medical.html">Pharmacy</a></li></div>
-            <ul class="nav-links">
-                <li><a href="home.html">Updates</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="locations.html">Locations</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="logo"><a href="medical.html">Pharmacy</a></div>
+        <ul class="nav-links">
+            <li><a href="home.html">Updates</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
 
-    
+    <h1>About Us</h1>
 
     <!-- Container 1 -->
     <div class="container">
@@ -229,6 +225,13 @@
             <img src="team.jpg" alt="About Image 4">
         </div>
     </div>
+
+<script>
+    function toggleMenu() {
+        var navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
