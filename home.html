@@ -65,6 +65,19 @@
             background-color: #03313f;
         }
 
+        /* Hamburger Menu (for mobile) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+        }
+
         /* Ensure content does not overlap the fixed navbar */
         main {
             margin-top: 80px; /* Creates space to avoid overlap with the navbar */
@@ -128,23 +141,34 @@
             margin-bottom: 10px;
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            body {
-                min-height: auto;
+       /* Mobile-specific styles */
+       @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #8bb9ee;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
             }
-            .message-box {
-                padding: 20px;
-                margin: 20px;
+        
+            .hamburger {
+                display: block;
             }
-            .post-container {
-                padding: 10px;
+        
+            .nav-links.active {
+                display: flex;
             }
-        }
 
-        @media (max-width: 480px) {
-            .message-box {
+            .nav-links a {
+                display: block;
                 padding: 15px;
+            }
+
+            .container {
+                flex-direction: column;
             }
         }
     </style>
@@ -152,13 +176,18 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo"><a href="medical.html" style="color: white;">Pharmacy</a></div>
+        <div class="logo"><a href="index.html" style="color: white;">Pharmacy</a></div>
         <ul class="nav-links">
             <li><a href="home.html">Update</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="locations.html">Locations</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -170,6 +199,12 @@
     </main>
 
     <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
         // Example news posts (added by admin)
         const newsPosts = [
             {
