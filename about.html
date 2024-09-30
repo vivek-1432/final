@@ -17,6 +17,46 @@
             padding: 20px;
             text-align: center;
         }
+        .navbar {
+            background-color: #66bb6a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-links li {
+            display: inline;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: #388e3c;
+        }
 
         /* Button Styles */
         .redirect-btn {
@@ -112,9 +152,16 @@
 </head>
 <body>
 
-    <button class="redirect-btn" onclick="window.location.href='medical.html'">Medical</button>
+    <nav class="navbar">
+            <div class="logo"><li><a href="medical.html">Pharmacy</a></li></div>
+            <ul class="nav-links">
+                <li><a href="home.html">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-    <h1>About Us</h1>
+    
 
     <!-- Container 1 -->
     <div class="container">
