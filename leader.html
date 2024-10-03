@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Pharmacy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgb(250, 251, 252), #ffffff, #000000);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-image: linear-gradient(rgba(148, 147, 147, 0.5), #b1e9f394, #d6f3fcab);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: fixed; /* Changed to fixed */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 0 25px rgb(1, 188, 245);
+            border: 1px solid #03cbfd;
+        }
+
+        .logo img {
+            width: 120px;
+            height: 80px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #0f6a9e;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+            border-radius: 30px;
+        }
+
+        .nav-links a:hover {
+            background-color: transparent;
+            border: 2px solid #a855f7;
+            color: #f8192b;
+        }
+
+        /* Ensure content does not overlap the fixed navbar */
+        main {
+            margin-top: 120px; /* Creates space for the navbar */
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for additional cards */
+            justify-content: center; /* Center the cards */
+            gap: 80px;
+            padding: 70px;
+        }
+
+
+        .profile-card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #03cbfd;
+            border-radius: 10px;
+            text-align: center;
+            background: transparent;
+            box-shadow: 0 10px 10px rgba(1, 170, 248, 0.973);
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #080808;
+        }
+
+        .profile-position {
+            font-size: 18px;
+            color: #fa0505;
+            margin-bottom: 10px;
+        }
+
+        .profile-email {
+            font-size: 16px;
+            color: #050505;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="medical.html">
+                    <img src="pharmacy-logo.jpg" alt="Pharmacy Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Profiles Section -->
+        <div class="profile-container">
+            <div class="profile-card">
+                <img src="pharmasist.jpg" alt="John Doe" class="profile-img">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-position">Pharmacist</p>
+                <a href="mailto:johndoe@example.com" class="profile-email">johndoe@example.com</a>
+            </div>
+
+            <div class="profile-card">
+                <img src="pharmasist.jpg" alt="John Doe" class="profile-img">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-position">Pharmacist</p>
+                <a href="mailto:johndoe@example.com" class="profile-email">johndoe@example.com</a>
+            </div>
+
+            <div class="profile-card">
+                <img src="pharmasist.jpg" alt="John Doe" class="profile-img">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-position">Pharmacist</p>
+                <a href="mailto:johndoe@example.com" class="profile-email">johndoe@example.com</a>
+            </div>
+            
+            <div class="profile-card">
+                <img src="pharmasist.jpg" alt="John Doe" class="profile-img">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-position">Pharmacist</p>
+                <a href="mailto:johndoe@example.com" class="profile-email">johndoe@example.com</a>
+            </div>
+
+            <div class="profile-card">
+                <img src="pharmasist.jpg" alt="John Doe" class="profile-img">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-position">Pharmacist</p>
+                <a href="mailto:johndoe@example.com" class="profile-email">johndoe@example.com</a>
+            </div>
+
+            <div class="profile-card">
+                <img src="pharmasist.jpg" alt="John Doe" class="profile-img">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-position">Pharmacist</p>
+                <a href="mailto:johndoe@example.com" class="profile-email">johndoe@example.com</a>
+            </div>
+
+            <div class="profile-card">
+                <img src="pharmasist.jpg" alt="John Doe" class="profile-img">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-position">Pharmacist</p>
+                <a href="mailto:johndoe@example.com" class="profile-email">johndoe@example.com</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Function to display posts dynamically
+        function displayPosts() {
+            const postContainer = document.getElementById('postContainer');
+            postContainer.innerHTML = ''; // Clear any existing posts
+
+            const newsPosts = [
+                {
+                    headline: "Heart Health Awareness",
+                    content: "Learn how to keep your heart healthy with our new awareness campaign. Visit us for details.",
+                    imageUrl: "heart_health.jpg"
+                }
+                // Add more post objects as needed
+            ];
+
+            newsPosts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+
+                if (post.imageUrl) {
+                    const imageElement = document.createElement('img');
+                    imageElement.src = post.imageUrl;
+                    postElement.appendChild(imageElement);
+                }
+
+                const headlineElement = document.createElement('h2');
+                headlineElement.textContent = post.headline;
+                postElement.appendChild(headlineElement);
+
+                const contentElement = document.createElement('p');
+                contentElement.textContent = post.content;
+                postElement.appendChild(contentElement);
+
+                postContainer.appendChild(postElement);
+            });
+        }
+
+        // Load and display the posts when the page loads
+        window.onload = function() {
+            displayPosts();
+        };
+    </script>
+</body>
+</html>
