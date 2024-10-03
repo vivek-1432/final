@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purpose of Our Pharmacy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #03d5fa;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #03a9f4;
+        }
+
+        .mission, .vision, .services {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .mission h3, .vision h3, .services h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .mission p, .vision p, .services p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(1, 196, 245, 0.3);
+            margin: 0;
+            border: 1px solid rgb(47, 0, 255);
+        }
+
+        .logo img {
+            width: 120px;
+            height: 80px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #03d5fa;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+            border-radius: 30px;
+        }
+
+        .nav-links a:hover {
+            background-color: transparent;
+            border: 2px solid #a855f7;
+            color: #f8192b;
+        }
+        .shortcut {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 35px;
+            padding-top: 10px;
+            display: flex;
+            gap: 35px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar"></nav>
+            <div class="logo">
+                <a href="medical.html">
+                    <img src="pharmacy-logo.jpg" alt="Pharmacy Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Purpose of Our Pharmacy</h1>
+        <p>Committed to enhancing your health and well-being.</p>
+    </header>
+
+    <div class="container">
+        <!-- Mission Section -->
+        <section class="section mission">
+            <h2>Our Mission</h2>
+            <h3>Providing Quality Care</h3>
+            <p>Our mission is to provide accessible, high-quality pharmacy services to our community. We strive to improve the health of our patients through compassionate care, expert advice, and a dedication to meeting individual needs.</p>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="section vision">
+            <h2>Our Vision</h2>
+            <h3>Empowering Healthier Lives</h3>
+            <p>We envision a healthier community where everyone has access to the medications and resources they need to maintain their health. Our goal is to empower individuals to take control of their health through education, support, and innovative pharmacy solutions.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services">
+            <h2>Our Services</h2>
+            <h3>Comprehensive Pharmacy Solutions</h3>
+            <p>We offer a wide range of services to meet the diverse needs of our patients, including:</p>
+            <ul>
+                <li>Prescription filling and management</li>
+                <li>Medication therapy management</li>
+                <li>Health screenings and immunizations</li>
+                <li>Consultations for over-the-counter medications</li>
+                <li>Health and wellness education</li>
+            </ul>
+            <p>At our pharmacy, we are dedicated to supporting your health journey every step of the way.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pharmacy Inc. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
