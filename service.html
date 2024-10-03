@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Health Services & Pharmacy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navbar Styles */
+        .navbar {
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 0 20px #f8f8f8;
+            margin: 0;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fa0303;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+            border-radius: 30px;
+        }
+
+        .nav-links a:hover {
+            background-color: transparent;
+            border: 2px solid #a855f7;
+            color: #d1d5db;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .spacer {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .tabs {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .tabnav--wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .tabnav {
+            display: flex;
+        }
+        .tabnav button {
+            background-color: #eee;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .tabnav button.active {
+            background-color: #007BFF;
+            color: white;
+        }
+        .tabnav button:hover {
+            background-color: #ddd;
+        }
+        .tabs--contentsection {
+            margin-top: 20px;
+        }
+        .tab--content {
+            display: none;
+        }
+        .tab--content.active {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .tab--content img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .cta__linkswrapper a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .cta__linkswrapper a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar"></nav>
+            <div class="logo">
+                <a href="medical.html">
+                    <img src="pharmacy-logo.jpg" alt="Pharmacy Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Spacer Section -->
+        <div class="spacer enterprise-separator"></div>
+
+        <!-- Main Title -->
+        <h1>Building a World of Health Around Every Consumer</h1>
+
+        <!-- Tab Navigation Section -->
+        <div class="tabs">
+            <div class="tabnav--wrapper">
+                <!-- Tab Navigation -->
+                <button class="tab--control" onclick="switchTab(0)">Health Services</button>
+                <button class="tab--control" onclick="switchTab(1)">Health Insurance</button>
+                <button class="tab--control" onclick="switchTab(2)">Pharmacy</button>
+                <button class="tab--control" onclick="switchTab(3)">Prescription Drug Coverage</button>
+            </div>
+
+            <!-- Tab Content Section -->
+            <div class="tabs--contentsection">
+                <!-- Health Services Tab -->
+                <div class="tab--content" id="tab0">
+                    <div>
+                        <h3>Health Services</h3>
+                        <p>We have an unmatched ability to reach people and provide them with access to affordable, quality health care and wellbeing services they need to live their healthiest lives.</p>
+                        <div class="cta__linkswrapper">
+                            <a href="/services/health-care-and-wellness.html">Explore our services</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="the future.jpg" alt="Doctor and young girl smiling">
+                    </div>
+                </div>
+
+                <!-- Health Insurance Tab -->
+                <div class="tab--content" id="tab1">
+                    <div>
+                        <h3>Health Insurance</h3>
+                        <p>Aetna® creates insurance plans that deliver a total, connected, affordable approach to health care.</p>
+                        <div class="cta__linkswrapper">
+                            <a href="/services/health-insurance.html">Discover Aetna plans</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://www.example.com/health-insurance.jpg" alt="Female and male reading pamphlet together">
+                    </div>
+                </div>
+
+                <!-- Pharmacy Tab -->
+                <div class="tab--content" id="tab2">
+                    <div>
+                        <h3>Pharmacy</h3>
+                        <p>Our neighborhood pharmacies — as well as our prescription delivery and specialty medication services — make it easy for people to get the care they need.</p>
+                        <div class="cta__linkswrapper">
+                            <a href="/services/pharmacy.html">Visit our pharmacy page</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://www.example.com/pharmacy.jpg" alt="Pharmacists working in pharmacy">
+                    </div>
+                </div>
+
+                <!-- Prescription Drug Coverage Tab -->
+                <div class="tab--content" id="tab3">
+                    <div>
+                        <h3>Prescription Drug Coverage</h3>
+                        <p>CVS Caremark® helps lower drug costs and expands access to affordable medications for healthier living.</p>
+                        <div class="cta__linkswrapper">
+                            <a href="/services/prescription-drug-coverage.html">Learn about drug coverage</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://www.example.com/drug-coverage.jpg" alt="Pharmacist filling prescriptions">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="news spacer">
+            <h2>Aetna 2025 Medicare Plans Announced</h2>
+            <p><a href="/news/medicare/aetna-2025-medicare-plans.html">Read the press release</a></p>
+            <img src="https://www.example.com/medicare-plans.jpg" alt="A couple looking at a laptop">
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabIndex) {
+            var tabs = document.querySelectorAll('.tab--content');
+            var buttons = document.querySelectorAll('.tab--control');
+
+            // Hide all tabs
+            tabs.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            buttons.forEach(function (btn) {
+                btn.classList.remove('active');
+            });
+
+            // Show the selected tab and activate the button
+            tabs[tabIndex].classList.add('active');
+            buttons[tabIndex].classList.add('active');
+        }
+
+        // Initialize the first tab as active
+        document.addEventListener('DOMContentLoaded', function () {
+            switchTab(0);
+        });
+    </script>
+
+</body>
+</html>
