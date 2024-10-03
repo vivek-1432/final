@@ -21,23 +21,25 @@
 
         /* Navbar Styles */
         .navbar {
-            background-color: #82aaf3;
-            color: white;
+            background-color: white ;
             display: flex;
             justify-content: space-between;
-            padding: 15px;
             align-items: center;
+            padding: 15px;
             position: sticky;
             top: 0;
-            width: 100%;
             z-index: 1000;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(1, 196, 245, 0.3);
+            margin: 0;
+            border: 1px solid rgb(47, 0, 255);
         }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+
+        .logo img {
+            width: 120px;
+            height: 80px;
         }
-        
+
         .nav-links {
             list-style-type: none;
             margin: 0;
@@ -45,21 +47,33 @@
             display: flex;
             gap: 15px;
         }
-        
+
         .nav-links li {
             display: inline;
         }
-        
+
         .nav-links a {
             text-decoration: none;
-            color: white;
+            color: #03d5fa;
             padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+            border-radius: 30px;
         }
-        
+
         .nav-links a:hover {
-            background-color: #2a2964;
+            background-color: transparent;
+            border: 2px solid #a855f7;
+            color: #f8192b;
+        }
+        .shortcut {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 35px;
+            padding-top: 10px;
+            display: flex;
+            gap: 35px;
         }
 
         /* Hamburger Menu (for mobile) */
@@ -81,28 +95,87 @@
             width: 100vw;
         }
 
-        /* Responsive Styling */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #66bb6a;
-                width: 100%;
-                text-align: center;
-                position: absolute;
-                top: 60px;
-                left: 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-                background-color: #8bb9ee;
-            }
-
-            .hamburger {
-                display: block;
-            }
+        /* Footer Styles */
+        footer {
+            background-image: linear-gradient(rgb(255, 255, 255), rgba(5, 5, 5, 0.541));
+            color: #333;
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
         }
+
+        footer h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+
+        footer .footer-links div {
+            flex: 1 1 200px;
+            margin: 15px;
+        }
+
+        footer .footer-links a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            font-size: 13px;
+        }
+
+        footer .footer-links a:hover {
+            color: #fc4b05;
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            color: #05daf7;
+            font-size: 25px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #fa0303;
+        }
+
+        footer .copyright {
+            margin-top: 20px;
+            color: #0a0a0a;
+        }
+
+        @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background-color: #8bb9ee; /* Light blue background */
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 60px;
+            left: 0;
+        }
+
+        .nav-links.active {
+            display: flex;
+            background-color: #8bb9ee; /* Light blue background when active */
+        }
+
+        .hamburger {
+            display: block;
+        }
+        }
+
 
         @media (max-width: 480px) {
             #map {
@@ -114,10 +187,14 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo"><a href="medical.html" style="color: white;">Pharmacy</a></div>
+        <div class="logo">
+            <a href="medical.html">
+                <img src="pharmacy-logo.jpg" alt="Pharmacy Logo">
+            </a>
+        </div>
         <ul class="nav-links">
-            <li><a href="home.html">Update</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="locations.html">Locations</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -130,6 +207,58 @@
 
     <!-- Fullscreen Map -->
     <div id="map"></div>
+
+    <footer></footer>
+        <h3>Healthier Happens Together™</h3>
+
+        <div class="footer-links">
+            <div>
+                <h4>Quick Links</h4>
+                <a href="news.html">News</a>
+                <a href="leader.html">Leadership</a>
+                <a href="careers.html">Careers</a>
+                <a href="investor.html">Investors</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <a href="https://en.wikipedia.org/wiki/COVID-19">COVID-19</a>
+                <a href="service.html">Health Care and Wellness</a>
+                <a href="drug.html">Prescription Drug Coverage</a>
+                <a href="helth.html">Health Insurance</a>
+                <a href="medical.html">Pharmacy</a>
+            </div>
+            <div>
+                <h4>Impact</h4>
+                <a href="#">Initiatives</a>
+                <a href="#">Company Policies</a>
+                <a href="#">Our Opioid Response</a>
+                <a href="#">Political Contributions</a>
+                <a href="#">Disclosures</a>
+            </div>
+            <div>
+                <h4>More Info</h4>
+                <a href="#">Vulnerability Disclosure Program</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Privacy Center</a>
+                <a href="#">Site Map</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Code of Conduct</a>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <div class="copyright">
+            <p>© Copyright 1999 - 2024 CVS Health</p>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
